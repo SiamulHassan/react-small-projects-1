@@ -23,7 +23,7 @@ const CountDate = () => {
       : setCount((prev) => --prev);
   };
   return (
-    <div>
+    <div className="countDate">
       <div className="couuntby5">
         <span onClick={hanldeFiveNext} style={{ fontSize: "25px" }}>
           +

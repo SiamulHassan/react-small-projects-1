@@ -204,6 +204,20 @@ div.selected {
   color: #fff;
   font-weight: bold;
 }
+.countDate {
+  background-color: #ffff;
+  padding: 5rem;
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto;
+}
+.countdaterange {
+  background-color: #ffff;
+  padding: 5rem;
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto;
+}
 /*
 SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 128

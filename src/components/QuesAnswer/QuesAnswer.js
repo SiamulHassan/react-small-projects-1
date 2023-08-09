@@ -41,6 +41,7 @@ const QuesAnswer = () => {
     <div className="flashcards">
       {questions.map((qus) => (
         <div
+          key={qus.id}
           className={qus.id === selectedQuesID ? "selected" : ""}
           onClick={() => handleClickedID(qus.id)}
         >
