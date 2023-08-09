@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import CountDate from "./components/CountDate/CountDate";
+import StepCounter from "./components/StepCounter/StepCounter";
+import pizzaData from "./data.js";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CountDate />
+      <StepCounter />
+      <Menu />
     </div>
   );
 }
-
 export default App;
+
+function Menu() {
+  return (
+    <>
+      <ul className="pizzas">
+        {pizzaData.map((pizzaItem, key) => (
+          <PizzaList pizzaObj={pizzaItem} key={key} />
+        ))}
+      </ul>
+    </>
+  );
+}
+// props holo akta js object so jokhon destructure korbo tokhon sei prop er nam(obj er nam) ta match thaka lagbe. akhane pizzaObj holo sei prop/obj er nam
+function PizzaList({ pizzaObj }) {
+  return (
+    <>
+      <li className="pizza">
+        <img src={pizzaObj.photoName} alt={pizzaObj.photoName} />
+        <div>
+          <h3>{pizzaObj.name}</h3>
+          <p>{pizzaObj.ingredients}</p>
+          <span>{pizzaObj.price}</span>
+        </div>
+      </li>
+    </>
+  );
+}
