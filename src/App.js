@@ -1,10 +1,12 @@
 import "./App.css";
 import CountDate from "./components/CountDate/CountDate";
+import QuesAnswer from "./components/QuesAnswer/QuesAnswer";
 import StepCounter from "./components/StepCounter/StepCounter";
 import pizzaData from "./data.js";
 function App() {
   return (
     <div className="App">
+      <QuesAnswer />
       <CountDate />
       <StepCounter />
       <Menu />
