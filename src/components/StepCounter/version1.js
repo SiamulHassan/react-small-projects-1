@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./style.css";
-import Button from "./ReUseableBtn/ReUseableBtn";
 const messages = [
   "Learn React ⚛️",
   "Apply for jobs 💼",
@@ -35,15 +34,12 @@ const StepCounter = () => {
           <p className="message">{`Step${step}: ${messages[step - 1]}`}</p>
 
           <div className="buttons">
-            {/* <button className="previous" onClick={handlePrev}>
+            <button className="previous" onClick={handlePrev}>
               Previous
-            </button> */}
-            <Button bgColor="#7950f2" textColor="#fff" onClicked={handlePrev}>
-              👈Previous
-            </Button>
-            <Button bgColor="#7950f2" textColor="#fff" onClicked={handleNext}>
-              Next👉
-            </Button>
+            </button>
+            <button className="next" onClick={handleNext}>
+              Next
+            </button>
           </div>
         </div>
       )}
